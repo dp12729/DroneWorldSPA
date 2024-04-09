@@ -21,7 +21,7 @@ const Weather: React.FC = () => {
 
   useEffect(() => {
     const apiKey = "3c1392e3468ecc8dc7f462ac3d8e7f78"; // Replace with your OpenWeatherMap API key
-    const url = `https://api.openweathermap.org/data/3.0/onecall?lat=34&lon=-84.5&appid=${apiKey}&units=metric`;
+    const url = `https://api.openweathermap.org/data/3.0/onecall?lat=32.45&lon=-81.78&appid=${apiKey}&units=metric`;
 
     const fetchWeather = async () => {
       try {
