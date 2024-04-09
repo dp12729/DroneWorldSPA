@@ -1,4 +1,4 @@
-# Drone World Website
+# Drone World SPA (Single Page Application)
 
 Welcome to the Drone World SPA! This is a simple single page application about drones, featuring information about drones, a gallery of drone images, a place to contact, and weather information.
 
