@@ -1,0 +1,306 @@
+/* General body styling */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4; /* Example background color */
+}
+
+/* Header styling */
+header {
+  background-color: #0B2432; /* Example header background color */
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
+
+/* Logo styling */
+header img {
+  height: 200px; /* Adjust the height of the logo */
+  margin-right: 0.5rem;
+}
+
+/* Navigation styling */
+header nav {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li {
+  padding: 0 1rem;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+header nav ul li a:hover {
+  color: #5f5f5f; /* Adjust hover color as needed */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  header img {
+    height: 30px; /* Smaller logo on mobile */
+  }
+  
+  header nav ul li {
+    padding: 0 0.5rem;
+  }
+}
+
+
+footer {
+  background-color: #0B2432;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.footer-content {
+  margin: 0 auto;
+  max-width: 1200px; /* or your preferred max-width */
+}
+
+@media (max-width: 768px) {
+  footer {
+    padding: 0.5rem;
+  }
+}
+
+
+  .app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  .home-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  
+  .home-content {
+    display: flex;
+    align-items: center; /* Align the items vertically */
+    justify-content: space-between; /* Add space between the video and text */
+    flex-direction: column; 
+    padding-top: 20px;
+  }
+  
+
+  .home-video {
+    max-width: 90vw;
+    border-radius: 20px; /* Optional: for styled video edges */
+    height: auto;
+    overflow: hidden;
+    margin: 2rem;
+  }
+
+
+.home-text {
+  flex-basis: 100%;
+  margin: 2rem;
+  margin-bottom: 100px;
+}
+  
+  
+  @media (max-width: 768px) {
+    .home-content {
+      flex-direction: column; /* Stack the video and text on smaller screens */
+    }
+  
+    .home-video {
+      width: 300px;
+      height: 300px;
+      left: -150px; /* Adjust for smaller screens */
+    }
+    .home-text {
+      width: 100%; /* Full width on smaller screens */
+      margin-right: 0; /* Reset margin */
+    }
+  
+    .home-text {
+      margin-top: 1rem; /* Add some space between the video and text */
+    }
+  }
+
+
+  .gallery {
+    display: flex;
+    justify-content: center; /* Center gallery items (images) horizontally */
+    flex-wrap: wrap; /* Allow items to wrap to next line if needed */
+    gap: 10px; /* Space between items */
+    margin: 20px; /* Margin around the gallery for spacing */
+  }
+
+  .gallery.row {
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    flex-wrap: nowrap; /* Keep items in a single row */
+    overflow-x: auto; /* Allow horizontal scrolling */
+    gap: 16px; /* Space between items */
+  }
+
+  .gallery.row .gallery-item {
+    flex: none; /* Prevent items from growing or shrinking */
+    margin-right: 16px; /* Space between items in a row */
+  }
+
+  .gallery.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+    margin: 40px;
+  }
+
+  
+
+  .gallery-item {
+    width: 200px; /* Set a specific size for the circular frame */
+    height: 200px; /* Equal to width to maintain the circle shape */
+    border-radius: 50%; /* Creates a circular shape */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; /* Centering the gallery item if it's the only one */
+  }
+  
+  .gallery-item img {
+    transition: transform 0.3s ease; /* Smooth transition for transform effects */
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures images cover the frame without distortion */
+  }
+  
+  .enlarged {
+    transform: scale(1.1); /* Slightly enlarges the image on selection */
+  }
+  
+  .backdrop {
+    position: fixed; /* Covers the entire viewport */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10; /* Ensures it's above other content */
+    flex-direction: column; /* Stack items vertically */
+    padding: 20px; /* Add padding for spacing */
+    box-sizing: border-box; /* Ensure padding does not affect size */
+    text-align: center; /* Center-align the text */
+  }
+  
+  .backdrop img {
+    max-width: 80%; /* Limits the size of the enlarged image */
+    max-height: 80%; /* Adjust based on viewport */
+    box-shadow: 0 0 10px #fff; /* Optional: Adds a shadow for emphasis */
+    margin-bottom: 20px; /* Add space between the image and its description */
+  }
+
+  .image-description {
+    color: #fff; /* White text color for visibility */
+    font-size: 1.2rem; /* Adjust the font size as needed */
+    max-width: 80%; /* Ensures text does not span wider than the image */
+  }
+
+  .weather-container {
+    text-align: center; /* Center aligns all content */
+    padding: 20px; /* Adds some padding around the content */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    gap: 20px; /* Adds space between items */
+  }
+  
+  .weather-image {
+    width: 100px; /* Adjust based on your preference */
+    height: 100px; /* Adjust to keep the aspect ratio */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+  }
+  
+  .weather-description {
+    margin: 0; /* Removes default margin from h1 */
+    font-size: 1.5rem; /* Adjusts the size of the font */
+    font-weight: bold; /* Makes the font bold */
+  }
+  
+  .current-weather {
+    margin: 0; /* Removes default margin from h2 */
+    font-size: 1.2rem; /* Adjusts the size of the font */
+  }
+  
+  .weather-radar {
+    width: 90%; /* Make the radar wider */
+    height: 600px;
+    border: 8px solid transparent; /* Required for border-image to work */
+    border-radius: 15px; /* Optional: adds rounded corners to the radar */
+    border-image: repeating-linear-gradient(45deg, #0B2432, #0B2432 10px, white 10px, white 20px) 10; 
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: auto;
+    gap: 10px; /* Space between form fields */
+  }
+  
+  .contact-form label {
+    margin-bottom: 5px;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 15px; /* Space below each input/textarea */
+  }
+  
+  .contact-form button {
+    background-color: #0B2432;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .contact-form button:hover {
+    background-color: #0056b3;
+  }
+
+  .contact-header {
+    text-align: center;
+    font-size: 2rem; /* Adjust the font size as needed */
+    color: #333; /* Adjust the color as needed */
+    margin-top: 2rem;
+  }
