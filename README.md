@@ -9,8 +9,7 @@ To run this website locally on your computer, follow these steps:
 
 1. **Set Up Node.js Environment**: 
 
-   If you haven't already, install Node.js on your computer. You can download it from the [Node.js Official Website.](https://nodejs.org/en)
-   After installation, verify that Node.js and npm (Node Package Manager) are installed correctly by running the following commands in your terminal or command prompt:
+   If you haven't already, install Node.js on your computer. You can download it from the [Node.js Official Website.](https://nodejs.org/en) Ensure it is running version       **v20.12.2** Or later. After installation, verify that Node.js and npm (Node Package Manager) are installed correctly by running the following commands in your terminal     or command prompt:
    ```bash
    node -v
    npm -v
@@ -27,11 +26,13 @@ To run this website locally on your computer, follow these steps:
    cd DroneWorldSPA
 4. **Install Dependencies**:
 
-   Run the following commands to install react-router-dom and bootstrap:
+   Run the following commands to install react-router-dom and bootstrap. Run the third command if **issues concerning 'HTML' arise**:
    ```bash
    npm i react-router-dom
    
    npm i bootstrap@5.2.3
+
+   npm i
 
 6. **Run the Server**:
 
